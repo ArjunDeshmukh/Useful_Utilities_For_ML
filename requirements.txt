@@ -1,4 +1,5 @@
 tensorflow
+keras
 tempfile
 sys
 os

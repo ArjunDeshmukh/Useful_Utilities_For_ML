@@ -1,10 +1,10 @@
 import tensorflow as tf
+import keras
 from tensorflow.keras import backend
 import tempfile
 import sys
 import os
 
-__version__ = 'dev'
 
 class L2_SP(tf.keras.regularizers.Regularizer):
     def __init__(self, base_weights, l2=0.01):

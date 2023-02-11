@@ -1,14 +1,14 @@
 from setuptools import setup
 
-from addkernelregularization_tf import __version__
+from useful_utilities_for_ml.__init__ import __version__
 
 setup(
-    name='addkernelregularization_tf',
+    name='useful_utilities_for_ml',
     version=__version__,
 
     url='https://github.com/ArjunDeshmukh/Useful_Utilities_For_ML',
     author='Arjun Deshmukh',
     author_email='darjun94@gmail.com',
 
-    py_modules=['addkernelregularization_tf'],
+    packages=['useful_utilities_for_ml'],
 )
