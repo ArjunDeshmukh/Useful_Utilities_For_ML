@@ -52,7 +52,10 @@ def add_kernel_regularization(model, regularization_weight=0.0001, regularizatio
     model.save_weights(tmp_weights_path)
 
     # load the model from the config
-    model = tf.keras.models.model_from_json(model_json, custom_objects={'L2_SP': L2_SP})
+    if regularization_type == 'L2_SP':
+        model = tf.keras.models.model_from_json(model_json, custom_objects={'L2_SP': L2_SP})
+    else:
+        model = tf.keras.models.model_from_json(model_json)
 
     # Reload the model weights
     model.load_weights(tmp_weights_path, by_name=True)
